@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Bavarian Inn Regression Test Automation Suite]">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test name="BavarianInnRegression(failed)">
+    <classes>
+      <class name="com.crm.qa.testcases.CheckSocialMediaTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.CheckSocialMediaTest -->
+      <class name="com.crm.qa.testcases.CheckLinksAllPagesTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="checkLinksMyTransactions"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.CheckLinksAllPagesTest -->
+      <class name="com.crm.qa.testcases.MyTransactionsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.MyTransactionsPageTest -->
+      <class name="com.crm.qa.testcases.CheckBalancePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.CheckBalancePageTest -->
+      <class name="com.crm.qa.testcases.RegistrationPerksPaymentTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="RegistrationPerksPaymentPage"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.RegistrationPerksPaymentTest -->
+      <class name="com.crm.qa.testcases.DetailsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="referFriend"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.DetailsPageTest -->
+      <class name="com.crm.qa.testcases.UploadRecieptPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.UploadRecieptPageTest -->
+      <class name="com.crm.qa.testcases.CheckLinksAllPagesHomeTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.CheckLinksAllPagesHomeTest -->
+      <class name="com.crm.qa.testcases.OffersPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.OffersPageTest -->
+      <class name="com.crm.qa.testcases.HowItWorksHomeTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.HowItWorksHomeTest -->
+      <class name="com.crm.qa.testcases.SocialPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.SocialPageTest -->
+      <class name="com.crm.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
+      <class name="com.crm.qa.testcases.RegisterPageCanadianTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.RegisterPageCanadianTest -->
+      <class name="com.crm.qa.testcases.LocationsPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.LocationsPageTest -->
+    </classes>
+  </test> <!-- BavarianInnRegression(failed) -->
+</suite> <!-- Failed suite [Bavarian Inn Regression Test Automation Suite] -->

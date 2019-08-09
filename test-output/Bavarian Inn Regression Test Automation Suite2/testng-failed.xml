@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Bavarian Inn Regression Test Automation Suite2]">
+  <listeners>
+    <listener class-name="com.qa.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test name="BavarianInnRegression(failed)">
+    <classes>
+      <class name="com.crm.qa.testcases.RegistrationPerksPaymentTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="RegistrationPerksPaymentPage"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.RegistrationPerksPaymentTest -->
+      <class name="com.crm.qa.testcases.RegisterPageCanadianTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.RegisterPageCanadianTest -->
+      <class name="com.crm.qa.testcases.MyTransactionsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.MyTransactionsPageTest -->
+      <class name="com.crm.qa.testcases.UploadRecieptPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.UploadRecieptPageTest -->
+      <class name="com.crm.qa.testcases.MyProfilePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.MyProfilePageTest -->
+      <class name="com.crm.qa.testcases.SocialPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.SocialPageTest -->
+      <class name="com.crm.qa.testcases.OffersPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.OffersPageTest -->
+    </classes>
+  </test> <!-- BavarianInnRegression(failed) -->
+</suite> <!-- Failed suite [Bavarian Inn Regression Test Automation Suite2] -->

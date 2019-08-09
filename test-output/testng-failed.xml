@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Bav Inn Generics]" parallel="tests">
+  <test name="Demo3(failed)" parallel="classes">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.mytests.LoginTest">
+        <methods>
+          <include name="setUpTest"/>
+          <include name="setUpTest"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verifyLoginPageHeaderTextTest"/>
+          <include name="verifyLoginPageTitleTest"/>
+        </methods>
+      </class> <!-- com.mytests.LoginTest -->
+    </classes>
+  </test> <!-- Demo3(failed) -->
+  <test name="Demo2(failed)" parallel="classes">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.mytests.LoginTest">
+        <methods>
+          <include name="setUpTest"/>
+          <include name="setUpTest"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="verifyLoginPageHeaderTextTest"/>
+          <include name="doLoginTest"/>
+          <include name="verifyLoginPageTitleTest"/>
+        </methods>
+      </class> <!-- com.mytests.LoginTest -->
+    </classes>
+  </test> <!-- Demo2(failed) -->
+  <test name="Demo1(failed)" parallel="classes">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.mytests.LoginTest">
+        <methods>
+          <include name="setUpTest"/>
+          <include name="setUpTest"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="doLoginTest"/>
+        </methods>
+      </class> <!-- com.mytests.LoginTest -->
+    </classes>
+  </test> <!-- Demo1(failed) -->
+</suite> <!-- Failed suite [Bav Inn Generics] -->

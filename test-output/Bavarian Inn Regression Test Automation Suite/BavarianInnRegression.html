@@ -1,0 +1,691 @@
+<html>
+<head>
+<title>TestNG:  BavarianInnRegression</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>BavarianInnRegression</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>77/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Aug 07 07:01:15 BST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>12578 seconds (12578970 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.crm.qa.testcases.RegistrationPerksPaymentTest.RegistrationPerksPaymentPage()'><b>RegistrationPerksPaymentPage</b><br>Test class: com.crm.qa.testcases.RegistrationPerksPaymentTest</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Yukon
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-G1T6KU3&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.crm.qa.pages.RegisterPage.selectState(RegisterPage.java:104)
+	at com.crm.qa.pages.RegisterPage.registerNewUserTest(RegisterPage.java:127)
+	at com.crm.qa.testcases.RegistrationPerksPaymentTest.RegistrationPerksPaymentPage(RegistrationPerksPaymentTest.java:45)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1426061914", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1426061914'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Yukon
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-G1T6KU3&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+	at com.crm.qa.pages.RegisterPage.selectState(RegisterPage.java:104)
+	at com.crm.qa.pages.RegisterPage.registerNewUserTest(RegisterPage.java:127)
+	at com.crm.qa.testcases.RegistrationPerksPaymentTest.RegistrationPerksPaymentPage(RegistrationPerksPaymentTest.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>40</td>
+<td>com.crm.qa.testcases.RegistrationPerksPaymentTest@43a0cee9</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksMyTransactions()'><b>checkLinksMyTransactions</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;...&lt;/a&gt; is not clickable at point (865, 50). Other element would receive the click: &lt;div id=&quot;async-overlay-backdrop&quot; style=&quot;background-color: rgba(0, 0, 0, 0.6); display: flex; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 9999999;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=76.0.3809.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-G1T6KU3&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\kiera\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51118}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6f0fe94287ea20d5971152a4353e6b2f
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy13.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at com.crm.qa.pages.DetailsPage.clickOnMyTransactions(DetailsPage.java:143)
+	at com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksMyTransactions(CheckLinksAllPagesTest.java:176)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace749013731", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace749013731'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;...&lt;/a&gt; is not clickable at point (865, 50). Other element would receive the click: &lt;div id=&quot;async-overlay-backdrop&quot; style=&quot;background-color: rgba(0, 0, 0, 0.6); display: flex; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 9999999;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=76.0.3809.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-G1T6KU3&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\kiera\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51118}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6f0fe94287ea20d5971152a4353e6b2f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy13.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at com.crm.qa.pages.DetailsPage.clickOnMyTransactions(DetailsPage.java:143)
+	at com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksMyTransactions(CheckLinksAllPagesTest.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesTest@150c158</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.DetailsPageTest.referFriend()'><b>referFriend</b><br>Test class: com.crm.qa.testcases.DetailsPageTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;submit&quot; class=&quot;btn btn-block btn-default&quot; value=&quot;Send Referral&quot; ng-disabled=&quot;referralData.Email == null || friendReferralForm.$invalid&quot;&gt; is not clickable at point (567, 420). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=76.0.3809.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-G1T6KU3&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\kiera\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49193}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 63dcd3e9d369953b5eb91b64bcacbde0
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy13.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at com.crm.qa.pages.DetailsPage.enterFriendsEmail(DetailsPage.java:157)
+	at com.crm.qa.testcases.DetailsPageTest.referFriend(DetailsPageTest.java:74)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2007052642", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2007052642'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input type=&quot;submit&quot; class=&quot;btn btn-block btn-default&quot; value=&quot;Send Referral&quot; ng-disabled=&quot;referralData.Email == null || friendReferralForm.$invalid&quot;&gt; is not clickable at point (567, 420). Other element would receive the click: &lt;div&gt;...&lt;/div&gt;
+  (Session info: chrome=76.0.3809.87)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-G1T6KU3&apos;, ip: &apos;192.168.1.18&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\kiera\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49193}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 63dcd3e9d369953b5eb91b64bcacbde0
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+	at com.sun.proxy.$Proxy13.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:417)
+	at sun.reflect.GeneratedMethodAccessor10.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy11.click(Unknown Source)
+	at com.crm.qa.pages.DetailsPage.enterFriendsEmail(DetailsPage.java:157)
+	at com.crm.qa.testcases.DetailsPageTest.referFriend(DetailsPageTest.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.crm.qa.testcases.DetailsPageTest@401e7803</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.crm.qa.testcases.UploadRecieptPageTest.assertContactUs()'><b>assertContactUs</b><br>Test class: com.crm.qa.testcases.UploadRecieptPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.UploadRecieptPageTest@706a04ae</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.assertContactUs()'><b>assertContactUs</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.UploadRecieptPageTest.assertFAQ()'><b>assertFAQ</b><br>Test class: com.crm.qa.testcases.UploadRecieptPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.UploadRecieptPageTest@706a04ae</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.assertFAQ()'><b>assertFAQ</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.UploadRecieptPageTest.assertPrivacyPolicy()'><b>assertPrivacyPolicy</b><br>Test class: com.crm.qa.testcases.UploadRecieptPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.UploadRecieptPageTest@706a04ae</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.assertPrivacyPolicy()'><b>assertPrivacyPolicy</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckBalancePageTest.assertTermsAndCond()'><b>assertTermsAndCond</b><br>Test class: com.crm.qa.testcases.CheckBalancePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.CheckBalancePageTest@544a2ea6</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.DetailsPageTest.assertTermsAndCond()'><b>assertTermsAndCond</b><br>Test class: com.crm.qa.testcases.DetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.DetailsPageTest@401e7803</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.HowItWorksHomeTest.assertTermsAndCond()'><b>assertTermsAndCond</b><br>Test class: com.crm.qa.testcases.HowItWorksHomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.HowItWorksHomeTest@10dba097</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LocationsPageTest.assertTermsAndCond()'><b>assertTermsAndCond</b><br>Test class: com.crm.qa.testcases.LocationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LocationsPageTest@1786f9d5</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.MyTransactionsPageTest.assertTermsAndCond()'><b>assertTermsAndCond</b><br>Test class: com.crm.qa.testcases.MyTransactionsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.MyTransactionsPageTest@704d6e83</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.UploadRecieptPageTest.assertTermsAndCond()'><b>assertTermsAndCond</b><br>Test class: com.crm.qa.testcases.UploadRecieptPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.UploadRecieptPageTest@706a04ae</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.assertTermsAndCond()'><b>assertTermsAndCond</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.UploadRecieptPageTest.brandImageDisplayed()'><b>brandImageDisplayed</b><br>Test class: com.crm.qa.testcases.UploadRecieptPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.UploadRecieptPageTest@706a04ae</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckSocialMediaTest.checkFacebook()'><b>checkFacebook</b><br>Test class: com.crm.qa.testcases.CheckSocialMediaTest</td>
+<td></td>
+<td>7</td>
+<td>com.crm.qa.testcases.CheckSocialMediaTest@4524411f</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksCheckBalance()'><b>checkLinksCheckBalance</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesTest</td>
+<td></td>
+<td>8</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesTest@150c158</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksDetailsHome()'><b>checkLinksDetailsHome</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesTest</td>
+<td></td>
+<td>8</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesTest@150c158</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesHomeTest.checkLinksFAQ()'><b>checkLinksFAQ</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesHomeTest</td>
+<td></td>
+<td>6</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesHomeTest@2e3fc542</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesHomeTest.checkLinksHowItWorks()'><b>checkLinksHowItWorks</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesHomeTest</td>
+<td></td>
+<td>9</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesHomeTest@2e3fc542</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksLocations()'><b>checkLinksLocations</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesTest</td>
+<td></td>
+<td>4</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesTest@150c158</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksOffers()'><b>checkLinksOffers</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesTest</td>
+<td></td>
+<td>16</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesTest@150c158</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesHomeTest.checkLinksRegister()'><b>checkLinksRegister</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesHomeTest</td>
+<td></td>
+<td>4</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesHomeTest@2e3fc542</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksSocialPage()'><b>checkLinksSocialPage</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesTest</td>
+<td></td>
+<td>4</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesTest@150c158</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksmyProfile()'><b>checkLinksmyProfile</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesTest</td>
+<td></td>
+<td>8</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesTest@150c158</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckLinksAllPagesTest.checkLinksuploadReciept()'><b>checkLinksuploadReciept</b><br>Test class: com.crm.qa.testcases.CheckLinksAllPagesTest</td>
+<td></td>
+<td>6</td>
+<td>com.crm.qa.testcases.CheckLinksAllPagesTest@150c158</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckSocialMediaTest.checkTripAdvisor()'><b>checkTripAdvisor</b><br>Test class: com.crm.qa.testcases.CheckSocialMediaTest</td>
+<td></td>
+<td>11</td>
+<td>com.crm.qa.testcases.CheckSocialMediaTest@4524411f</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckSocialMediaTest.checkTwitter()'><b>checkTwitter</b><br>Test class: com.crm.qa.testcases.CheckSocialMediaTest</td>
+<td></td>
+<td>9</td>
+<td>com.crm.qa.testcases.CheckSocialMediaTest@4524411f</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckSocialMediaTest.checkYelp()'><b>checkYelp</b><br>Test class: com.crm.qa.testcases.CheckSocialMediaTest</td>
+<td></td>
+<td>7</td>
+<td>com.crm.qa.testcases.CheckSocialMediaTest@4524411f</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckSocialMediaTest.checkYoutube()'><b>checkYoutube</b><br>Test class: com.crm.qa.testcases.CheckSocialMediaTest</td>
+<td></td>
+<td>4</td>
+<td>com.crm.qa.testcases.CheckSocialMediaTest@4524411f</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LoginPageTest.crmLogoImageTest()'><b>crmLogoImageTest</b><br>Test class: com.crm.qa.testcases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LoginPageTest@7276c8cd</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.enterFriendsEmail()'><b>enterFriendsEmail</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckBalancePageTest.footerContactUs()'><b>footerContactUs</b><br>Test class: com.crm.qa.testcases.CheckBalancePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.CheckBalancePageTest@544a2ea6</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.DetailsPageTest.footerContactUs()'><b>footerContactUs</b><br>Test class: com.crm.qa.testcases.DetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.DetailsPageTest@401e7803</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.HowItWorksHomeTest.footerContactUs()'><b>footerContactUs</b><br>Test class: com.crm.qa.testcases.HowItWorksHomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.HowItWorksHomeTest@10dba097</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LocationsPageTest.footerContactUs()'><b>footerContactUs</b><br>Test class: com.crm.qa.testcases.LocationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LocationsPageTest@1786f9d5</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.MyTransactionsPageTest.footerContactUs()'><b>footerContactUs</b><br>Test class: com.crm.qa.testcases.MyTransactionsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.MyTransactionsPageTest@704d6e83</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckBalancePageTest.footerFAQ()'><b>footerFAQ</b><br>Test class: com.crm.qa.testcases.CheckBalancePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.CheckBalancePageTest@544a2ea6</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.DetailsPageTest.footerFAQ()'><b>footerFAQ</b><br>Test class: com.crm.qa.testcases.DetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.DetailsPageTest@401e7803</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.HowItWorksHomeTest.footerFAQ()'><b>footerFAQ</b><br>Test class: com.crm.qa.testcases.HowItWorksHomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.HowItWorksHomeTest@10dba097</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LocationsPageTest.footerFAQ()'><b>footerFAQ</b><br>Test class: com.crm.qa.testcases.LocationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LocationsPageTest@1786f9d5</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.MyTransactionsPageTest.footerFAQ()'><b>footerFAQ</b><br>Test class: com.crm.qa.testcases.MyTransactionsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.MyTransactionsPageTest@704d6e83</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckBalancePageTest.footerPrivacyPolicy()'><b>footerPrivacyPolicy</b><br>Test class: com.crm.qa.testcases.CheckBalancePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.CheckBalancePageTest@544a2ea6</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.DetailsPageTest.footerPrivacyPolicy()'><b>footerPrivacyPolicy</b><br>Test class: com.crm.qa.testcases.DetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.DetailsPageTest@401e7803</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.HowItWorksHomeTest.footerPrivacyPolicy()'><b>footerPrivacyPolicy</b><br>Test class: com.crm.qa.testcases.HowItWorksHomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.HowItWorksHomeTest@10dba097</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LocationsPageTest.footerPrivacyPolicy()'><b>footerPrivacyPolicy</b><br>Test class: com.crm.qa.testcases.LocationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LocationsPageTest@1786f9d5</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.MyTransactionsPageTest.footerPrivacyPolicy()'><b>footerPrivacyPolicy</b><br>Test class: com.crm.qa.testcases.MyTransactionsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.MyTransactionsPageTest@704d6e83</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.UploadRecieptPageTest.imageIsDisplayed()'><b>imageIsDisplayed</b><br>Test class: com.crm.qa.testcases.UploadRecieptPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.UploadRecieptPageTest@706a04ae</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.HowItWorksHomeTest.isBrandImageDisplayed()'><b>isBrandImageDisplayed</b><br>Test class: com.crm.qa.testcases.HowItWorksHomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.HowItWorksHomeTest@10dba097</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LocationsPageTest.isBrandImageDisplayed()'><b>isBrandImageDisplayed</b><br>Test class: com.crm.qa.testcases.LocationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LocationsPageTest@1786f9d5</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.MyTransactionsPageTest.isBrandImageDisplayed()'><b>isBrandImageDisplayed</b><br>Test class: com.crm.qa.testcases.MyTransactionsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.MyTransactionsPageTest@704d6e83</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.MyTransactionsPageTest.isBrandLogoDisplayed()'><b>isBrandLogoDisplayed</b><br>Test class: com.crm.qa.testcases.MyTransactionsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.MyTransactionsPageTest@704d6e83</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LoginPageTest.loginPageTitleTest()'><b>loginPageTitleTest</b><br>Test class: com.crm.qa.testcases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LoginPageTest@7276c8cd</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LoginPageTest.loginTest()'><b>loginTest</b><br>Test class: com.crm.qa.testcases.LoginPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LoginPageTest@7276c8cd</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.RegistrationPerksPaymentTest.registerNewUserTest()'><b>registerNewUserTest</b><br>Test class: com.crm.qa.testcases.RegistrationPerksPaymentTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.RegistrationPerksPaymentTest@43a0cee9</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.RegisterPageCanadianTest.registerNewUserTest()'><b>registerNewUserTest</b><br>Test class: com.crm.qa.testcases.RegisterPageCanadianTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.RegisterPageCanadianTest@2eda0940</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LocationsPageTest.textBavInnLodgeDisplayed()'><b>textBavInnLodgeDisplayed</b><br>Test class: com.crm.qa.testcases.LocationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LocationsPageTest@1786f9d5</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.HowItWorksHomeTest.textEarnAndRedeem()'><b>textEarnAndRedeem</b><br>Test class: com.crm.qa.testcases.HowItWorksHomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.HowItWorksHomeTest@10dba097</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.HowItWorksHomeTest.textLoyaltyCard()'><b>textLoyaltyCard</b><br>Test class: com.crm.qa.testcases.HowItWorksHomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.HowItWorksHomeTest@10dba097</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LocationsPageTest.textMainStreetShopsDisplayed()'><b>textMainStreetShopsDisplayed</b><br>Test class: com.crm.qa.testcases.LocationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LocationsPageTest@1786f9d5</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.UploadRecieptPageTest.uploadRecieptImageTest()'><b>uploadRecieptImageTest</b><br>Test class: com.crm.qa.testcases.UploadRecieptPageTest</td>
+<td></td>
+<td>11</td>
+<td>com.crm.qa.testcases.UploadRecieptPageTest@706a04ae</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.verifyBrandImageDisplayed()'><b>verifyBrandImageDisplayed</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.CheckBalancePageTest.verifyDetailsPageTitleTest()'><b>verifyDetailsPageTitleTest</b><br>Test class: com.crm.qa.testcases.CheckBalancePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.CheckBalancePageTest@544a2ea6</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.HowItWorksHomeTest.verifyDetailsPageTitleTest()'><b>verifyDetailsPageTitleTest</b><br>Test class: com.crm.qa.testcases.HowItWorksHomeTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.HowItWorksHomeTest@10dba097</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.LocationsPageTest.verifyDetailsPageTitleTest()'><b>verifyDetailsPageTitleTest</b><br>Test class: com.crm.qa.testcases.LocationsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.LocationsPageTest@1786f9d5</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.MyTransactionsPageTest.verifyDetailsPageTitleTest()'><b>verifyDetailsPageTitleTest</b><br>Test class: com.crm.qa.testcases.MyTransactionsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.MyTransactionsPageTest@704d6e83</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.OffersPageTest.verifyDetailsPageTitleTest()'><b>verifyDetailsPageTitleTest</b><br>Test class: com.crm.qa.testcases.OffersPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.OffersPageTest@eb21112</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.verifyDetailsPageTitleTest()'><b>verifyDetailsPageTitleTest</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.UploadRecieptPageTest.verifyDetailsPageTitleTest()'><b>verifyDetailsPageTitleTest</b><br>Test class: com.crm.qa.testcases.UploadRecieptPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.UploadRecieptPageTest@706a04ae</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.DetailsPageTest.verifyHomeLoginPageTitleTest()'><b>verifyHomeLoginPageTitleTest</b><br>Test class: com.crm.qa.testcases.DetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.DetailsPageTest@401e7803</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.verifyImageIsDisplayed()'><b>verifyImageIsDisplayed</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.OffersPageTest.verifyLogoDisplayed()'><b>verifyLogoDisplayed</b><br>Test class: com.crm.qa.testcases.OffersPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.OffersPageTest@eb21112</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.OffersPageTest.verifyMembersOffersLogoDisplayed()'><b>verifyMembersOffersLogoDisplayed</b><br>Test class: com.crm.qa.testcases.OffersPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.OffersPageTest@eb21112</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.OffersPageTest.verifySocialMediaFooter()'><b>verifySocialMediaFooter</b><br>Test class: com.crm.qa.testcases.OffersPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.OffersPageTest@eb21112</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.OffersPageTest.verifyTextDisplayed()'><b>verifyTextDisplayed</b><br>Test class: com.crm.qa.testcases.OffersPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.OffersPageTest@eb21112</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.verifyTextDisplayed()'><b>verifyTextDisplayed</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.DetailsPageTest.verifyWelcomeName()'><b>verifyWelcomeName</b><br>Test class: com.crm.qa.testcases.DetailsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.DetailsPageTest@401e7803</td></tr>
+<tr>
+<td title='com.crm.qa.testcases.SocialPageTest.verifytwitterIsDisplayed()'><b>verifytwitterIsDisplayed</b><br>Test class: com.crm.qa.testcases.SocialPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.crm.qa.testcases.SocialPageTest@3578436e</td></tr>
+</table><p>
+</body>
+</html>
