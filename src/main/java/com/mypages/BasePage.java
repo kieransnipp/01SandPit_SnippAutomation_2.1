@@ -90,52 +90,7 @@ public abstract class BasePage extends Page {
 		return pageUrl;
 	}
 
-//	@Override
-//	public String getPageTitle() {
-//		return driver.getTitle();
-//	}
-//
-//	@Override
-//	public String getPageHeader(By locator) {
-//		return getElement(locator).getText();
-//
-//	}
-//
-//	@Override
-//	public WebElement getElement(By locator) {
-//		WebElement element = null;
-//		waitForElementPresent(locator);
-//		try {
-//			element = driver.findElement(locator);
-//			return element;
-//		} catch (Exception e) {
-//			System.out.println("Some error happened for element" + locator.toString());
-//			e.printStackTrace();
-//		}
-//		return element;
-//
-//	}
-//
-//	@Override
-//	public void waitForElementPresent(By locator) {
-//		try {
-//			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-//		} catch (Exception e) {
-//			System.out.println("Some error happened for element waiting for element =" + locator.toString());
-//			e.printStackTrace();
-//		}
-//
-//	}
-//
-//	@Override
-//	public void waitForPageTitle(String title) {
-//		try {
-//			wait.until(ExpectedConditions.titleContains(title));
-//		} catch (Exception e) {
-//			System.out.println("Some error happened for title =" + title);
-//			e.printStackTrace();
-//		}
-//
-//	}
+
+
 
 }
