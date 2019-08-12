@@ -1,49 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21245" started-at="2019-08-09T17:47:54Z" finished-at="2019-08-09T17:48:15Z">
+  <suite name="Default suite" duration-ms="119347" started-at="2019-08-11T09:55:57Z" finished-at="2019-08-11T09:57:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21245" started-at="2019-08-09T17:47:54Z" finished-at="2019-08-09T17:48:15Z">
-      <class name="com.mytests.LoginTest">
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:com.mytests.LoginTest@1fc2b765]" name="setUpTest" is-config="true" duration-ms="6962" started-at="2019-08-09T18:47:54Z" finished-at="2019-08-09T18:48:01Z">
+    <test name="Default test" duration-ms="119347" started-at="2019-08-11T09:55:57Z" finished-at="2019-08-11T09:57:56Z">
+      <class name="com.crm.qa.testcases.CheckBalancePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="setUp" is-config="true" duration-ms="24694" started-at="2019-08-11T10:55:57Z" finished-at="2019-08-11T10:56:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="verifyLoginPageTitleTest()[pri:1, instance:com.mytests.LoginTest@1fc2b765]" name="verifyLoginPageTitleTest" duration-ms="13" started-at="2019-08-09T18:48:01Z" finished-at="2019-08-09T18:48:01Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyDetailsPageTitleTest()[pri:1, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="verifyDetailsPageTitleTest" duration-ms="21" started-at="2019-08-11T10:56:22Z" finished-at="2019-08-11T10:56:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginPageTitleTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mytests.LoginTest@1fc2b765]" name="tearDown" is-config="true" duration-ms="747" started-at="2019-08-09T18:48:01Z" finished-at="2019-08-09T18:48:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:com.mytests.LoginTest@1fc2b765]" name="setUpTest" is-config="true" duration-ms="5819" started-at="2019-08-09T18:48:02Z" finished-at="2019-08-09T18:48:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="verifyLoginPageHeaderTextTest()[pri:2, instance:com.mytests.LoginTest@1fc2b765]" name="verifyLoginPageHeaderTextTest" duration-ms="64" started-at="2019-08-09T18:48:08Z" finished-at="2019-08-09T18:48:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginPageHeaderTextTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mytests.LoginTest@1fc2b765]" name="tearDown" is-config="true" duration-ms="633" started-at="2019-08-09T18:48:08Z" finished-at="2019-08-09T18:48:08Z">
+        </test-method> <!-- verifyDetailsPageTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="tearDown" is-config="true" duration-ms="666" started-at="2019-08-11T10:56:22Z" finished-at="2019-08-11T10:56:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUpTest()[pri:0, instance:com.mytests.LoginTest@1fc2b765]" name="setUpTest" is-config="true" duration-ms="5802" started-at="2019-08-09T18:48:08Z" finished-at="2019-08-09T18:48:14Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="setUp" is-config="true" duration-ms="22868" started-at="2019-08-11T10:56:22Z" finished-at="2019-08-11T10:56:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpTest -->
-        <test-method status="PASS" signature="doLoginTest()[pri:3, instance:com.mytests.LoginTest@1fc2b765]" name="doLoginTest" duration-ms="470" started-at="2019-08-09T18:48:14Z" finished-at="2019-08-09T18:48:14Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="assertTermsAndCond()[pri:2, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="assertTermsAndCond" duration-ms="152" started-at="2019-08-11T10:56:45Z" finished-at="2019-08-11T10:56:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLoginTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mytests.LoginTest@1fc2b765]" name="tearDown" is-config="true" duration-ms="709" started-at="2019-08-09T18:48:14Z" finished-at="2019-08-09T18:48:15Z">
+        </test-method> <!-- assertTermsAndCond -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="tearDown" is-config="true" duration-ms="628" started-at="2019-08-11T10:56:45Z" finished-at="2019-08-11T10:56:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.mytests.LoginTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="setUp" is-config="true" duration-ms="22959" started-at="2019-08-11T10:56:46Z" finished-at="2019-08-11T10:57:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="footerPrivacyPolicy()[pri:3, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="footerPrivacyPolicy" duration-ms="57" started-at="2019-08-11T10:57:09Z" finished-at="2019-08-11T10:57:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- footerPrivacyPolicy -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="tearDown" is-config="true" duration-ms="713" started-at="2019-08-11T10:57:09Z" finished-at="2019-08-11T10:57:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="setUp" is-config="true" duration-ms="22409" started-at="2019-08-11T10:57:10Z" finished-at="2019-08-11T10:57:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="footerFAQ()[pri:4, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="footerFAQ" duration-ms="47" started-at="2019-08-11T10:57:32Z" finished-at="2019-08-11T10:57:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- footerFAQ -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="tearDown" is-config="true" duration-ms="710" started-at="2019-08-11T10:57:32Z" finished-at="2019-08-11T10:57:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="setUp" is-config="true" duration-ms="22681" started-at="2019-08-11T10:57:33Z" finished-at="2019-08-11T10:57:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="footerContactUs()[pri:5, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="footerContactUs" duration-ms="50" started-at="2019-08-11T10:57:56Z" finished-at="2019-08-11T10:57:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- footerContactUs -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.crm.qa.testcases.CheckBalancePageTest@1fc2b765]" name="tearDown" is-config="true" duration-ms="656" started-at="2019-08-11T10:57:56Z" finished-at="2019-08-11T10:57:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.crm.qa.testcases.CheckBalancePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

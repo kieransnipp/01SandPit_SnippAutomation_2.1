@@ -50,11 +50,11 @@ public class CheckBalancePage extends TestBase {
 	WebElement toastEmailExists;
 
 	// @FindBy(xpath ="//*[contains(text(), 'My Profile')]")
-	@FindBy(xpath = "//*[@id='logged-in-dropdown']/li/a")
-	WebElement myProfile;
-
-	@FindBy(xpath = "//*[@id=\"logged-in-dropdown\"]/li/ul/li[1]/a")
-	WebElement myProfile_myProfile;
+//	@FindBy(xpath = "//*[@id='logged-in-dropdown']/li/a")
+//	WebElement myProfile;
+//
+//	@FindBy(xpath = "//*[@id=\"logged-in-dropdown\"]/li/ul/li[1]/a")
+//	WebElement myProfile_myProfile;
 
 	public Boolean imageIsDisplayed() {
 		return perksClubImage.isDisplayed();
@@ -72,12 +72,6 @@ public class CheckBalancePage extends TestBase {
 		return toastEmailExists.isDisplayed();
 	}
 
-//	public void goToProfile() {
-//		Select select = new Select(driver.findElement(By.linkText("Check Balance")));
-//		select.selectByIndex(0);
-//		driver.findElement(By.linkText("Check Balance")).click();
-//
-//	}
 
 	public Boolean referTextDisplayed() {
 		return referTextDisplayed.isDisplayed();

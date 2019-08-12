@@ -83,6 +83,8 @@ public class CheckBalancePageTest extends TestBase {
 	public void footerContactUs() {
 		Assert.assertTrue(checkPageBalance.assertContactUs());
 	}
+	
+	
 
 	@AfterMethod
 	public void tearDown() {

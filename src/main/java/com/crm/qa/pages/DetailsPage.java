@@ -1,5 +1,7 @@
 package com.crm.qa.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +15,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 
 import com.crm.qa.base.TestBase;
+import com.mypages.HomePage;
 
 import edu.emory.mathcs.backport.java.util.concurrent.TimeUnit;
 
@@ -93,8 +96,12 @@ public class DetailsPage extends TestBase {
 	@FindBy(xpath = "//*[@id='logged-in-dropdown']/li/ul/li[3]/a")
 	WebElement clickProfileTransactions;
 
-	@FindBy(xpath = "//*[@id='logged-in-dropdown']/li/ul/li[4]/a")
-	WebElement clicklogout;
+	//@FindBy(xpath = "//*[@id='logged-in-dropdown']/li/ul/li[4]/a")
+	//WebElement clicklogout;
+	
+	@FindBy(xpath ="//ul[contains(@class,'dropdown-menu')]//li//a")
+	List <WebElement> myProfilelist;
+	
 
 	// Initializing the Page Objects:
 	// Going between pages
@@ -128,21 +135,45 @@ public class DetailsPage extends TestBase {
 	}
 
 	public MyProfilePage clickOnMyProfilePage() {
-		driver.get("https://bavarianinn.snipp.ie/home/member/details/profile#");
+		//driver.get("https://bavarianinn.snipp.ie/home/member/details/profile#");
+		
+		for (int i = 0; i < myProfilelist.size(); i++) {
+			System.out.println(myProfilelist.get(i).getText());
+			if(myProfilelist.get(i).getText().contains("MY PROFILE")) {
+				myProfilelist.get(i).click();
+			}
+		}
 		return new MyProfilePage();
 	}
 
 	public CheckBalancePage clickOnCheckBalance() throws InterruptedException {
 		
 		clickProfile.click();
-		clickProfileBalance.click();
+		//List <WebElement> myProfilelist = driver.findElements(By.xpath("//ul[contains(@class,'dropdown-menu')]//li//a"));
+		System.out.println("List size is = "+myProfilelist.size());
+		
+		for (int i = 0; i < myProfilelist.size(); i++) {
+			System.out.println(myProfilelist.get(i).getText());
+			if(myProfilelist.get(i).getText().contains("CHECK BALANCE")) {
+				myProfilelist.get(i).click();
+			}
+		}
 
 		return new CheckBalancePage();
 	}
 
 	public MyTransactionsPage clickOnMyTransactions() throws InterruptedException {
 		clickProfile.click();
-		clickProfileTransactions.click();
+		
+System.out.println("List size is = "+myProfilelist.size());
+		
+		for (int i = 0; i < myProfilelist.size(); i++) {
+			System.out.println(myProfilelist.get(i).getText());
+			if(myProfilelist.get(i).getText().contains("MY TRANSACTIONS")) {
+				myProfilelist.get(i).click();
+			}
+		}
+		//clickProfileTransactions.click();
 
 		return new MyTransactionsPage();
 	}
@@ -154,36 +185,11 @@ public class DetailsPage extends TestBase {
 
 	public boolean enterFriendsEmail(String email) throws InterruptedException {
 		referFriend.sendKeys(email);
-		
 		submitEmail.click();
 		Thread.sleep(2000);
 		return toastEmailExists.isDisplayed();
 	}
 
-//	// social media checking
-//	public void checksocialMFacebook() {
-//		socialMFacebook.click();
-//	}
-//
-//	public void checksocialMYoutube() {
-//		socialMYoutube.click();
-//	}
-//
-//	public void checksocialMTripAdvisor() {
-//		socialMTripAdvisor.click();
-//	}
-//	
-//	public void checksocialMYelp() {
-//		socialMYelp.click();
-//	}
-//	public void checksocialMTwitter() {
-//		socialMTripAdvisor.click();
-//	}
-	
-	
-	
-	
-	
 
 	// Footer
 	public boolean assertTermsAndCond() { // All pages
@@ -203,8 +209,16 @@ public class DetailsPage extends TestBase {
 		return contactUs.isDisplayed();
 	}
 
-	public void logOutOfApplication() {
-		clicklogout.click();
+	public HowItWorksHomePage logOutOfApplication() {
+		
+		for (int i = 0; i < myProfilelist.size(); i++) {
+			System.out.println(myProfilelist.get(i).getText());
+			if(myProfilelist.get(i).getText().contains("LOG OUT")) {
+				myProfilelist.get(i).click();
+			}
+			
+		}
+		return new HowItWorksHomePage();
 	}
 
 }

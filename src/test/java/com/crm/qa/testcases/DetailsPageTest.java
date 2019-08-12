@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.crm.qa.base.TestBase;
 
 import com.crm.qa.pages.DetailsPage;
+import com.crm.qa.pages.HowItWorksHomePage;
 import com.crm.qa.pages.LocationsPage;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.pages.MyProfilePage;
@@ -27,6 +28,7 @@ public class DetailsPageTest extends TestBase {
 
 	DetailsPage detailsPage;
 	MyTransactionsPage myTransactions;
+	HowItWorksHomePage howItWorksHomePage;
 
 	public DetailsPageTest() {
 		super();
@@ -50,6 +52,7 @@ public class DetailsPageTest extends TestBase {
 		socialPage = new SocialPage();
 		myProfilePage = new MyProfilePage();
 		detailsPage = new DetailsPage();
+		 howItWorksHomePage = new HowItWorksHomePage();
 
 		detailsPage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 
@@ -94,6 +97,15 @@ public class DetailsPageTest extends TestBase {
 	@Test(priority = 7)
 	public void footerContactUs() {
 		Assert.assertTrue(detailsPage.assertContactUs());
+	}
+	
+	@Test(priority = 7)
+	public void lcheckLogout() {
+		detailsPage.logOutOfApplication();
+	  howItWorksHomePage = detailsPage.logOutOfApplication();
+	  Assert.assertEquals("Home", detailsPage.verifyPageTitle());
+		
+		
 	}
 
 	 @AfterMethod
