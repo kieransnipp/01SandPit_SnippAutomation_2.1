@@ -265,7 +265,7 @@
             Full path -->
             
            
-             <suiteXmlFile>src\main\resources\uat_bav_inn.xml</suiteXmlFile>
+             <suiteXmlFile>src\main\resources\uat_cat_top.xml</suiteXmlFile>
             
           </suiteXmlFiles>
         </configuration>
@@ -292,16 +292,16 @@
 <!-- </resources> -->
   </build>
   <scm>
-     <connection>scm:git:https://github.com/kieransnipp/UAT_bavarianInn.git</connection>
+     <connection>scm:git:https://github.com/kieransnipp/TopCatalystAutomation.git</connection>
   </scm>
 <distributionManagement>
         <repository>
             <id>ec2-arti</id>
-            <url>https://github.com/kieransnipp/UAT_bavarianInn.git</url>
+            <url>https://github.com/kieransnipp/TopCatalystAutomation.git</url>
         </repository>
         <snapshotRepository>
             <id>ec2-arti</id>
-            <url>http://github.com/kieransnipp/UAT_bavarianInn.git</url>
+            <url>http://github.com/kieransnipp/TopCatalystAutomation.git</url>
         </snapshotRepository>
     </distributionManagement>
 
