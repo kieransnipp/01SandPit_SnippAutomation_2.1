@@ -1,4 +1,4 @@
-package com.mypages;
+package com.top.pages;
 
 import org.openqa.selenium.By;
 //import org.openqa.selenium.By;

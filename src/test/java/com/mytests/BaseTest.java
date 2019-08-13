@@ -17,12 +17,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
-import com.mypages.LoginPage;
 import com.crm.qa.util.TestUtil;
 import com.crm.qa.util.WebEventListener;
-import com.mypages.BasePage;
-import com.mypages.HomePage;
-import com.mypages.Page;
+import com.top.pages.BasePage;
+import com.top.pages.HomePage;
+import com.top.pages.LoginPage;
+import com.top.pages.Page;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
