@@ -18,19 +18,19 @@ public class GeoLocator {
 		Map<String, Object> locationMap = new HashMap<String, Object>();
 
 		// LA
-		locationMap.put("latitude", 34.052235);
-		locationMap.put("longitude", -118.243683);
-		locationMap.put("accuracy", 1);
+		//locationMap.put("latitude", 34.052235);
+		//locationMap.put("longitude", -118.243683);
+		//locationMap.put("accuracy", 1);
 
 		// Dublin
-//		locationMap.put("latitude", 53.349804);
-//		locationMap.put("longitude", -6.260310);
-//		locationMap.put("accuracy", 1);
+		//locationMap.put("latitude", 53.349804);
+		//locationMap.put("longitude", -6.260310);
+		//locationMap.put("accuracy", 1);
 		
 		//Tokyo
-//		locationMap.put("latitude", 35.6804);
-//		locationMap.put("longitude", 139.7690);
-//		locationMap.put("accuracy", 1);
+		locationMap.put("latitude", 35.6804);
+		locationMap.put("longitude", 139.7690);
+		locationMap.put("accuracy", 1);
 
 		((ChromeDriver) driver).executeCdpCommand("Emulation.setGeolocationOverride", locationMap);
 
