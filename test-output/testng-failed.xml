@@ -1,15 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mytests.LoginTest">
+      <class name="demo.PopUp">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="switchingToPopUpWindows"/>
+        </methods>
+      </class> <!-- demo.PopUp -->
+      <class name="demo.BootstrapDropDownExample">
+        <methods>
+          <include name="selectWarningOption"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- demo.BootstrapDropDownExample -->
+      <class name="demo.TestNG_Demoa3">
+        <methods>
+          <include name="tearDown"/>
+          <include name="googleSearch"/>
+          <include name="setUpTest"/>
+        </methods>
+      </class> <!-- demo.TestNG_Demoa3 -->
+      <class name="demo.TestNG_Demoa2">
+        <methods>
+          <include name="googleSearch"/>
+          <include name="tearDown"/>
+          <include name="setUpTest"/>
+        </methods>
+      </class> <!-- demo.TestNG_Demoa2 -->
+      <class name="demo.CustomXPath">
         <methods>
           <include name="setUpTest"/>
           <include name="tearDown"/>
-          <include name="verifyLoginPageHeaderTextTest"/>
+          <include name="countLinks"/>
         </methods>
-      </class> <!-- com.mytests.LoginTest -->
+      </class> <!-- demo.CustomXPath -->
+      <class name="demo.TestNG_Demoa">
+        <methods>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+          <include name="googleSearch"/>
+        </methods>
+      </class> <!-- demo.TestNG_Demoa -->
+      <class name="demo.TestNG_Demo">
+        <methods>
+          <include name="googleSearch"/>
+          <include name="setUpTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- demo.TestNG_Demo -->
+      <class name="demo.TestNG_Demoa4">
+        <methods>
+          <include name="googleSearch"/>
+          <include name="tearDown"/>
+          <include name="setUpTest"/>
+        </methods>
+      </class> <!-- demo.TestNG_Demoa4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

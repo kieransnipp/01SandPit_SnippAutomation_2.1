@@ -73,6 +73,18 @@ public class LoginPage extends BasePage {
 		return getInstance(HomePage.class);
 	}
 
+	@Override
+	public void waitForElementPresent(By locator) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void waitForPageTitle(String title) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	// Overloading method
 //	public void doLogin() {
 //		getEmailId().sendKeys("wrong");

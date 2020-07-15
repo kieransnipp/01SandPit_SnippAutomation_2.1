@@ -18,16 +18,16 @@ public class GeoLocator {
 		Map<String, Object> locationMap = new HashMap<String, Object>();
 
 		// LA
-		//locationMap.put("latitude", 34.052235);
-		//locationMap.put("longitude", -118.243683);
-		//locationMap.put("accuracy", 1);
+		// locationMap.put("latitude", 34.052235);
+		// locationMap.put("longitude", -118.243683);
+		// locationMap.put("accuracy", 1);
 
 		// Dublin
-		//locationMap.put("latitude", 53.349804);
-		//locationMap.put("longitude", -6.260310);
-		//locationMap.put("accuracy", 1);
-		
-		//Tokyo
+		// locationMap.put("latitude", 53.349804);
+		// locationMap.put("longitude", -6.260310);
+		// locationMap.put("accuracy", 1);
+
+		// Tokyo
 		locationMap.put("latitude", 35.6804);
 		locationMap.put("longitude", 139.7690);
 		locationMap.put("accuracy", 1);
@@ -37,12 +37,10 @@ public class GeoLocator {
 		System.out.println("Launch site");
 
 		// Sites
-		 driver.get("https://www.starbucks.ie/store-locator");
-		//driver.get("https://oldnavy.gap.com/stores"); //US locations
-		//driver.get("https://www.gap.com/stores"); //US locations
-		//driver.get(" https://www.google.com/search?q=my+location");
-		
-		 
+		driver.get("https://www.starbucks.ie/store-locator");
+		// driver.get("https://oldnavy.gap.com/stores"); //US locations
+		// driver.get("https://www.gap.com/stores"); //US locations
+		// driver.get(" https://www.google.com/search?q=my+location");
 
 		System.out.println("Output");
 

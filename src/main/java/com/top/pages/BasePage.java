@@ -1,6 +1,7 @@
 package com.top.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 //import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 //import org.openqa.selenium.WebElement;
@@ -55,28 +56,33 @@ public abstract class BasePage extends Page {
 		return element;
 
 	}
-
-	@Override
-	public void waitForElementPresent(By locator) {
-		try {
-			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-		} catch (Exception e) {
-			System.out.println("Some excpeption/error occured waiting for the element " + locator.toString());
-			e.printStackTrace();
-		}
-
+	
+	public static boolean waitPageLoadedByDriver(WebDriver driver) {
+		return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("loaded")
+				|| ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
 	}
 
-	@Override
-	public void waitForPageTitle(String title) {
-		try {
-			wait.until(ExpectedConditions.titleContains(title));
-		} catch (Exception e) {
-			System.out.println("Some excpeption/error occured waiting for the element " + title);
-			e.printStackTrace();
-		}
-
-	}
+//	@Override
+//	public void waitForElementPresent(By locator) {
+//		try {
+//			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+//		} catch (Exception e) {
+//			System.out.println("Some excpeption/error occured waiting for the element " + locator.toString());
+//			e.printStackTrace();
+//		}
+//
+//	}
+//
+//	@Override
+//	public void waitForPageTitle(String title) {
+//		try {
+//			wait.until(ExpectedConditions.titleContains(title));
+//		} catch (Exception e) {
+//			System.out.println("Some excpeption/error occured waiting for the element " + title);
+//			e.printStackTrace();
+//		}
+//
+//	}
 
 	@Override
 	public <TPage extends BasePage> TPage getInstance(Class<TPage> pageClass) {

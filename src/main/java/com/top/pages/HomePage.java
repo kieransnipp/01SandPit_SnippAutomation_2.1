@@ -29,4 +29,16 @@ public class HomePage extends BasePage {
 		return getPageHeader(headerTitle);
 	}
 
+	@Override
+	public void waitForElementPresent(By locator) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void waitForPageTitle(String title) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
