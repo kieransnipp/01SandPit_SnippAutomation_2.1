@@ -5,7 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
 
 public class BasePage {
 
@@ -15,6 +17,9 @@ public class BasePage {
 	public WebDriver driver;
 
 	public WebDriver multiThreadSetUp(String browserName) {
+
+		System.out.println("Launching browser =" + browserName);
+
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", userDir + "/drivers/chromedriver.exe");
 			driver = new ChromeDriver();
@@ -26,9 +31,9 @@ public class BasePage {
 			System.out.println("Starting Firefox");
 		}
 		if (browserName.equals("opera")) {
-			System.setProperty("webdriver.gecko.driver", userDir + "/drivers/opera.exe");
-			driver = new FirefoxDriver();
-			System.out.println("Starting Firefox");
+			System.setProperty("webdriver.opera.driver", userDir + "/drivers/operadriver.exe");
+			driver = new OperaDriver();
+			System.out.println("Starting Opera");
 		}
 		driver.get("https://www.google.com/");
 		driver.manage().window().maximize();
@@ -39,9 +44,10 @@ public class BasePage {
 		return driver;
 	}
 
+	// @AfterMethod
 	public void threadTearDown() {
-		driver.close();
-		//driver.quit();
+
+		driver.quit();
 //		if (!browserName.contains("firefox")) {
 //			driver.quit();
 //		}

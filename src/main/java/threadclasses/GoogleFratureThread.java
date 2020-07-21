@@ -1,9 +1,5 @@
 package threadclasses;
 
-import java.io.IOException;
-import java.util.Locale;
-
-import org.apache.commons.lang.LocaleUtils;
 import io.codearte.jfairy.Fairy;
 import io.codearte.jfairy.producer.person.Person;
 
@@ -18,7 +14,7 @@ public class GoogleFratureThread extends Thread {
 		return this.fairy;
 	}
 
-	public GoogleFratureThread(String threadName, String browserName) {
+	public GoogleFratureThread(String threadName, String browserName) throws Exception {
 		super(threadName);
 		this.browserName = browserName;
 		googlePage = new GooglePage();
@@ -40,18 +36,17 @@ public class GoogleFratureThread extends Thread {
 
 		} catch (Exception e) {
 			System.out.println("Stach trace is =" + e.getStackTrace());
-			googlePage.threadTearDown();
-			
-			// } finally {
-//			try {
-//
-//			} catch (Exception e) {
-//				
-//				e.printStackTrace();
-//			}
+
+		} finally {
+			try {
+				googlePage.threadTearDown();
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
 
 		}
-		
+
 		System.out.println("Thread ended =" + Thread.currentThread().getId());
 
 	} // End run
