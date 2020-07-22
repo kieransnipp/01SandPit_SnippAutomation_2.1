@@ -14,8 +14,9 @@ public class GooglePage extends BasePage {
 		driver.findElement(By.name("q")).sendKeys("King unique");
 		driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 
-		driver.findElements(By.xpath("//h3")).stream().forEach(ele -> 
-		System.out.println("Search results are = "+ele.getText()));
+		System.out.println("Output is...");
+		driver.findElements(By.xpath("//h3")).stream()
+		.forEach(ele -> System.out.println("Search results are = "+ele.getText()));
 	}
 
 	public void tearDown() {

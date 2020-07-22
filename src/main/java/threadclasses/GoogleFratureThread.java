@@ -39,7 +39,7 @@ public class GoogleFratureThread extends Thread {
 
 		} finally {
 			try {
-				googlePage.threadTearDown();
+				googlePage.tearDown();
 			} catch (Exception e) {
 
 				e.printStackTrace();

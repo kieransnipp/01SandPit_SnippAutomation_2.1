@@ -45,12 +45,12 @@ public class BasePage {
 	}
 
 	// @AfterMethod
-	public void threadTearDown() {
-
-		driver.quit();
-//		if (!browserName.contains("firefox")) {
-//			driver.quit();
-//		}
-
-	}
+//	public void threadTearDown() {
+//
+//		driver.quit();
+////		if (!browserName.contains("firefox")) {
+////			driver.quit();
+////		}
+//
+//	}
 }
