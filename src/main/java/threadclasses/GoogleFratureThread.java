@@ -7,7 +7,7 @@ public class GoogleFratureThread extends Thread {
 
 	public String browserName;
 	public GooglePage googlePage = null;
-	private Fairy fairy = null;
+	public Fairy fairy = null;
 	public Person person = null;
 
 	protected Fairy GetLocalFairy() {

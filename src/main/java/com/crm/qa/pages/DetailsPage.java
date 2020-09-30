@@ -17,7 +17,6 @@ import org.testng.annotations.BeforeClass;
 import com.crm.qa.base.TestBase;
 import com.top.pages.HomePage;
 
-import edu.emory.mathcs.backport.java.util.concurrent.TimeUnit;
 
 public class DetailsPage extends TestBase {
 
