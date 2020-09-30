@@ -38,7 +38,6 @@ public class BaseTest {
 	static String userDir = System.getProperty("user.dir");
 
 
-
 	
 	HttpURLConnection huc = null;
 	int respCode = 200;
@@ -59,7 +58,7 @@ public class BaseTest {
 	
 	public static void initialization() {
 		String browserName = prop.getProperty("browser");
-
+		
 		if (browserName.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", userDir + "/drivers/chromedriver.exe");
 			driver = new ChromeDriver();
@@ -92,7 +91,7 @@ public class BaseTest {
 	} // End initialization
 
 	@BeforeMethod
-	public void setUpTest() {
+	public void setUpTest() { 
 		initialization();
 	}
 	

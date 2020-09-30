@@ -439,8 +439,8 @@
 
 
 					<suiteXmlFiles>
-						<!-- <suiteXmlFile>src\main\resources\geoLocator.xml</suiteXmlFile> -->
-						<suiteXmlFile>src\main\resources\pdf_reader_test.xml</suiteXmlFile>
+						<suiteXmlFile>src\main\resources\login_test.xml</suiteXmlFile>
+						
 
 					</suiteXmlFiles>
 
@@ -471,16 +471,16 @@
 		<!-- </resources> -->
 	</build>
 	<scm>
-		<connection>scm:git:https://github.com/kieransnipp/Snipp_Regression.git</connection>
+		<connection>scm:git:https://github.com/kieransnipp/SandPit_Demo.git</connection>
 	</scm>
 	<distributionManagement>
 		<repository>
 			<id>ec2-arti</id>
-			<url>https://github.com/kieransnipp/Snipp_Regression.git</url>
+			<url>https://github.com/kieransnipp/SandPit_Demo.git</url>
 		</repository>
 		<snapshotRepository>
 			<id>ec2-arti</id>
-			<url>http://github.com/kieransnipp/Snipp_Regression.git</url>
+			<url>http://github.com/kieransnipp/SandPit_Demo.git</url>
 		</snapshotRepository>
 	</distributionManagement>
 
