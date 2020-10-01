@@ -4,10 +4,12 @@ import java.util.HashMap;
 
 import org.testng.annotations.Test;
 
-public class GmailGetMailTest {
+import com.base.BaseTest;
 
-	@Test(priority = 1)
-	public void getMailFromGmail() {
+public class GmailGetMailTest extends BaseTest { 
+
+	@Test(priority = 1) 
+	public void getMailFromGmail() throws Exception {
 		String mailSubjectTitleIs = "Streamxxx";
 		boolean exist = false;
 
@@ -30,14 +32,29 @@ public class GmailGetMailTest {
 			System.out.println("Total count of emails is :" + GmailQuickstart.getTotalCountOfMails());
 
 			System.out.println("=================");
+			
+			//GmailQuickstart.clickOnLink();
 		} else {
 			System.out.println("Email title is not found");
 		}
 	}
 
-	@Test(priority = 2)
+//	@Test(priority = 2)
+//	public void clickOnLink() {
+//		String openLink = GmailQuickstart.clickOnLink();
+//		
+//		System.out.println("Link to open is ="+openLink);
+//		driver.get(openLink);
+//		
+//
+//	}
+
+	@Test(priority = 3)
 	public void clearOutInbox() throws Exception {
 		System.out.println("Clear out inbox first");
 		GmailQuickstart.deleteMails("Primary");
+		//driver.close();
+		//driver.quit();
 	}
+
 }
