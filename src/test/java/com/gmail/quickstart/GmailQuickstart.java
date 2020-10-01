@@ -12,10 +12,14 @@ import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.gmail.Gmail;
+import com.google.api.services.gmail.Gmail.Users.Messages.BatchDelete;
+import com.google.api.services.gmail.Gmail.Users.Messages.Delete;
 import com.google.api.services.gmail.GmailScopes;
+import com.google.api.services.gmail.model.BatchDeleteMessagesRequest;
 import com.google.api.services.gmail.model.Label;
 import com.google.api.services.gmail.model.ListLabelsResponse;
 import com.google.api.services.gmail.model.ListMessagesResponse;
+import com.google.api.services.gmail.model.ListThreadsResponse;
 import com.google.api.services.gmail.model.Message;
 
 import io.restassured.path.json.JsonPath;
@@ -34,7 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class GmailQuickstart {
-	private static final String APPLICATION_NAME = "Gmail API Java Quickstart";
+	private static final String APPLICATION_NAME = "Gmail API Java Util";
 	private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
 	private static final String USER_ID = "me";
 
@@ -53,6 +57,7 @@ public class GmailQuickstart {
 	static final String TOKENS_DIRECTORY_PATH = System.getProperty("user.dir") + File.separator + "src" + File.separator
 			+ "main" + File.separator + "resources" + File.separator + "credentials";
 
+	
 	/**
 	 * Creates an authorized Credential object.
 	 * 
@@ -110,6 +115,25 @@ public class GmailQuickstart {
 		Message message = service.users().messages().get(userId, messages.get(index).getId()).execute();
 		return message;
 	}
+	
+	public static void deleteMails( String  category) 
+			throws Exception {    
+		Gmail service = getService();
+		List<Message> messages = listMessagesMatchingQuery(service, USER_ID, category);
+	    // Retrieve a page of Threads; max of 100 by default.
+	    ListThreadsResponse threadsResponse = service.users().threads().list(USER_ID).setQ("category:"+category).execute();
+	    List<com.google.api.services.gmail.model.Thread> threads = threadsResponse.getThreads();
+
+	    // Delete each Thread.
+	    for (com.google.api.services.gmail.model.Thread thread : threads) {
+	              String ThreadID = thread.getId();
+	              service.users().threads().delete(USER_ID, ThreadID).execute();
+	              System.out.println("************ Clean out inbox now ****************");
+	              
+	              System.out.println("Email are now deleted by category ="+category);
+	    }
+
+	}
 
 	public static HashMap<String, String> getGmailData(String query) {
 		try {
@@ -123,7 +147,8 @@ public class GmailQuickstart {
 			String arr[] = body.split("\n");
 			for (String s : arr) {
 				s = s.trim();
-				if (s.startsWith("http") || s.startsWith("https")) {
+				if (s.startsWith("http") || s.startsWith("https") || s.startsWith("www")
+						|| s.startsWith("http://www")) {
 					link = s.trim();
 				}
 			}
@@ -210,21 +235,33 @@ public class GmailQuickstart {
 //				}
 //			}
 //		}
+	
 
-	public static void main(String[] args) throws IOException, GeneralSecurityException {
-		HashMap<String, String> hm = getGmailData("subject:Streamxxx");
-		System.out.println("Subject =" + hm.get("subject"));
-		System.out.println("=================");
-		System.out.println("Body =" + hm.get("body"));
-		System.out.println("=================");
-		System.out.println("Link =" + hm.get("link"));
 
-		System.out.println("=================");
-		System.out.println("Total count of emails is :" + getTotalCountOfMails());
+	public static void main(String[] args) throws Exception {
 
-		System.out.println("=================");
-		boolean exist = isMailExist("new link");
-		System.out.println("title exist or not: " + exist);
+		deleteMails("Primary");
+		// Search for the email by the Subject title
+		String mailSubjectTitleIs = "Streamxxx";
+		boolean exist = false;
 
+		exist = isMailExist(mailSubjectTitleIs);
+
+		if (exist == true) {
+			System.out.println("Email title found ="+exist);
+			HashMap<String, String> hm = getGmailData("subject:" + mailSubjectTitleIs);
+			System.out.println("Subject =" + hm.get("subject"));
+			System.out.println("=================");
+			System.out.println("Body =" + hm.get("body"));
+			System.out.println("=================");
+			System.out.println("Link =" + hm.get("link"));
+
+			System.out.println("=================");
+			System.out.println("Total count of emails is :" + getTotalCountOfMails());
+
+			System.out.println("=================");
+		} else {
+			System.out.println("Email title is not found");
+		}
 	}
 }
