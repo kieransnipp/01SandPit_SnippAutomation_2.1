@@ -1,12 +1,6 @@
 // Catalyst base 
 package com.base;
 
-import org.testng.Assert;
-import java.util.Random;
-import java.sql.Time;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterMethod;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -15,15 +9,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
+
 import java.util.Iterator;
 import java.util.List;
-import java.util.Locale;
-import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-import org.apache.commons.lang.LocaleUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,22 +24,12 @@ import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.remote.Command;
-import org.openqa.selenium.remote.CommandExecutor;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.Response;
+
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 
-import com.base.*;
-import com.google.common.collect.ImmutableMap;
 import com.qa.util.Helper;
-
-import io.codearte.jfairy.Fairy;
-import io.codearte.jfairy.producer.person.Person;
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 
 public class BaseTest {
 
@@ -61,7 +41,6 @@ public class BaseTest {
 	public static EventFiringWebDriver e_driver;
 
 	static String userDir = System.getProperty("user.dir");
-	public Fairy fairy = null;
 
 	public ThreadLocal<WebDriver> tdriver = new ThreadLocal<WebDriver>();
 
@@ -72,17 +51,12 @@ public class BaseTest {
 	By blueBOrdersNext = By
 			.xpath("//*[@id='myOrder']/app-snipp-rewards-orders/div/div/div/div/mat-paginator/div/div/div/button[2])");
 
-	protected Fairy GetLocalFairy() {
-		return this.fairy;
-	}
-
 	public BaseTest() {
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
 					System.getProperty("user.dir") + "/src/main/java/com/" + "/qa/config/config.properties");
 			prop.load(ip);
-		
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -113,8 +87,6 @@ public class BaseTest {
 		return driver;
 	}
 
-	
-
 	public boolean searchOnPageForData(String searchForThis) throws Exception {
 		System.out.println("Searching for text " + searchForThis);
 		boolean isDisplayed = false;
@@ -125,7 +97,7 @@ public class BaseTest {
 			isDisplayed = true;
 
 		} else
- 
+
 		{
 			isDisplayed = false;
 			System.out.println("Search for the string '" + searchForThis + "' is = " + isDisplayed);
@@ -137,14 +109,13 @@ public class BaseTest {
 
 	} // End while
 
-	
-
 	public static void initialization() throws IOException {
 
 		browserName = Helper.GetOverRideJenkinsBrowser("browser");
-		String testURL = Helper.GetOverRideJenkinsURL("url2"); 
-		String downloadSpeed = Helper.GetOverRideJenkinsDownloadSpeed("downloadSpeed");
-		String uploadSpeed = Helper.GetOverRideJenkinsURL("uploadSpeed");
+		String testURL = Helper.GetOverRideJenkinsURL("url2");
+		// String downloadSpeed =
+		// Helper.GetOverRideJenkinsDownloadSpeed("downloadSpeed");
+		// String uploadSpeed = Helper.GetOverRideJenkinsURL("uploadSpeed");
 
 		// Chrome
 		if (browserName.equals("chrome")) {
@@ -185,8 +156,8 @@ public class BaseTest {
 
 			// Commented this 4 lines out to make set the network speed
 			e_driver = new EventFiringWebDriver(driver);
-			//eventListener = new WebEventListener();
-		//	e_driver.register(eventListener);
+			// eventListener = new WebEventListener();
+			// e_driver.register(eventListener);
 			driver = e_driver;
 		} else if (browserName.equals("opera")) {
 			System.setProperty("webdriver.opera.driver", userDir + "/drivers/operadriver.exe");
@@ -195,8 +166,8 @@ public class BaseTest {
 
 			// Commented this 4 lines out to make set the network speed
 			e_driver = new EventFiringWebDriver(driver);
-			//eventListener = new WebEventListener();
-			//e_driver.register(eventListener);
+			// eventListener = new WebEventListener();
+			// e_driver.register(eventListener);
 			driver = e_driver;
 		} else if (browserName.equals("msedge")) {
 			System.setProperty("webdriver.edge.driver", userDir + "/drivers/msedgedriver.exe");
@@ -205,8 +176,8 @@ public class BaseTest {
 
 			// Commented this 4 lines out to make set the network speed
 			e_driver = new EventFiringWebDriver(driver);
-		//eventListener = new WebEventListener();
-		//	e_driver.register(eventListener);
+			// eventListener = new WebEventListener();
+			// e_driver.register(eventListener);
 			driver = e_driver;
 		}
 
@@ -225,23 +196,23 @@ public class BaseTest {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		//
-		int downloadSpeedInt = Integer.valueOf(downloadSpeed);
-		int uploadSpeedInt = Integer.valueOf(uploadSpeed);
-		System.out.println("downloadSpeedInt = " + downloadSpeedInt);
-		System.out.println("uploadSpeedInt = " + uploadSpeedInt);
-
-		// Insert download speed here
-		if (downloadSpeedInt > 0 && uploadSpeedInt > 0) {
-			CommandExecutor executor = ((RemoteWebDriver) driver).getCommandExecutor();
-			Map<String, Comparable> map = new HashMap<String, Comparable>();
-			map.put("offline", false);
-			map.put("latency", 5);
-			map.put("download_throughput", downloadSpeedInt);
-			map.put("upload_throughput", uploadSpeedInt);
-
-			Response response = executor.execute(new Command(((RemoteWebDriver) driver).getSessionId(),
-					"setNetworkConditions", ImmutableMap.of("network_conditions", ImmutableMap.copyOf(map))));
-		}
+		// int downloadSpeedInt = Integer.valueOf(downloadSpeed);
+//		int uploadSpeedInt = Integer.valueOf(uploadSpeed);
+//		System.out.println("downloadSpeedInt = " + downloadSpeedInt);
+//		System.out.println("uploadSpeedInt = " + uploadSpeedInt);
+//
+//		// Insert download speed here
+//		if (downloadSpeedInt > 0 && uploadSpeedInt > 0) {
+//			CommandExecutor executor = ((RemoteWebDriver) driver).getCommandExecutor();
+//			Map<String, Comparable> map = new HashMap<String, Comparable>();
+//			map.put("offline", false);
+//			map.put("latency", 5);
+//			map.put("download_throughput", downloadSpeedInt);
+//			map.put("upload_throughput", uploadSpeedInt);
+//
+//			Response response = executor.execute(new Command(((RemoteWebDriver) driver).getSessionId(),
+//					"setNetworkConditions", ImmutableMap.of("network_conditions", ImmutableMap.copyOf(map))));
+//		}
 
 		driver.get(testURL);
 

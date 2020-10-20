@@ -4,7 +4,7 @@
 
 
 	<test name="Demo1" parallel="classes" thread-count="5">
-		<parameter name="browser" value="firefox" />
+		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="demo.GeoLocator"></class>
 		</classes>
